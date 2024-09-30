@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Homepage
+Route::get('/', [AdminController::class, 'home']);
 
+// Dashboard Panel
 Route::get('/home', [AdminController::class, 'index'])->name('home');
